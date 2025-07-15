@@ -19,11 +19,11 @@ public abstract class PlayerController : MonoBehaviour
         if (this is P1_Paper)
         {
             Manager.Obj.P1 = (P1_Paper)this;
-            Manager.Game.SaveAction += () =>
+            Manager.Game.saveAction += () =>
             {
                 Manager.Game.p1SavePoint = transform.position;
             };
-            Manager.Game.DeathAction += () =>
+            Manager.Game.deathAction += () =>
             {
                 transform.position = Manager.Game.p1SavePoint;
             };
@@ -31,11 +31,11 @@ public abstract class PlayerController : MonoBehaviour
         if (this is P2_Ink)
         {
             Manager.Obj.P2 = (P2_Ink)this;
-            Manager.Game.SaveAction += () =>
+            Manager.Game.saveAction += () =>
             {
                 Manager.Game.p2SavePoint = transform.position;
             };
-            Manager.Game.DeathAction += () =>
+            Manager.Game.deathAction += () =>
             {
                 transform.position = Manager.Game.p2SavePoint;
             };
@@ -46,7 +46,7 @@ public abstract class PlayerController : MonoBehaviour
     {
         if (this is P1_Paper)
         {
-            Manager.Game.SaveAction?.Invoke();
+            Manager.Game.saveAction?.Invoke();
         }
     }
 

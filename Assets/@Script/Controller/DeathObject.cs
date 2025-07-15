@@ -6,7 +6,7 @@ public class DeathObject : MonoBehaviour
     {
         if (collision.transform == Manager.Obj.P1.transform || collision.transform == Manager.Obj.P2.transform)
         {
-            Manager.Game.DeathAction?.Invoke();
+            Manager.Game.deathAction?.Invoke();
         }
     }
 }
