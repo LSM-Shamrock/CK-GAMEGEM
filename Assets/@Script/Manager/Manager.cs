@@ -5,7 +5,7 @@ public class Manager
     private static Manager _instance = new Manager();
     private static Manager Instance { get { return _instance; } }
 
-    private ObjectManager _obj;
+    private ObjectManager _obj = new ObjectManager();
     public static ObjectManager Obj { get { return Instance._obj; } }
 
 
