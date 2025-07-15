@@ -1,48 +1,27 @@
-using UnityEngine;
+﻿using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
-public class P2_Ink : MonoBehaviour
+public class P2_Ink : PlayerController
 {
-    public float swimSpeed = 5f;
-    public float waterDrag = 5f;
+    protected override float _moveSpeed { get; set; } = 8f;
 
-    Rigidbody2D rb;
-    bool inWater;
+    protected override bool _isSwim { get; set; } = true;
+    protected override int _maxJumpCount { get; set; } = 1;
+    protected override int _curJumpCount { get; set; } = 0;
+    protected override float _jumpPower { get; set; } = 5f;
+    protected override float _fallSpeed { get; set; } = 5f;
 
-    void Awake() => rb = GetComponent<Rigidbody2D>();
 
-    void Update()
+    private void Update()
     {
-        float h = 0, v = 0;
-        if (Input.GetKey(KeyCode.LeftArrow))  h = -1;
-        if (Input.GetKey(KeyCode.RightArrow)) h = 1;
-        if (inWater)
-        {
-            if (Input.GetKey(KeyCode.UpArrow))    v = 1;
-            if (Input.GetKey(KeyCode.DownArrow))  v = -1;
-            rb.linearDamping = waterDrag;
-            rb.linearVelocity = new Vector2(h, v).normalized * swimSpeed;
-        }
-        else
-        {
-            rb.linearDamping = 0;
-            rb.linearVelocity = new Vector2(h * swimSpeed, rb.linearVelocity.y);
-        }
-    }
+        int dir = 0;
+        if (Input.GetKey(KeyCode.LeftArrow)) dir--;
+        if (Input.GetKey(KeyCode.RightArrow)) dir++;
+        UpdateMove(dir);
 
-    void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.gameObject.layer == LayerMask.NameToLayer("InkZone"))
-            inWater = true;
-    }
+        bool jump = Input.GetKeyDown(KeyCode.UpArrow);
+        UpdateJump(jump);
+        UpdateFall(Time.deltaTime);
 
-    void OnCollisionExit2D(Collision2D col)
-    {
-        if (col.gameObject.layer == LayerMask.NameToLayer("InkZone"))
-            inWater = false;
-    }
-
-    void OnTriggerEnter2D(Collider2D col)
-    {
+        UpdateSwim();
     }
 }
