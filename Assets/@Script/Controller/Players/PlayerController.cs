@@ -15,6 +15,12 @@ public abstract class PlayerController : MonoBehaviour
     protected virtual void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
+
+        if (this is P1_Paper)
+            Manager.Obj.P1 = (P1_Paper)this;
+
+        if (this is P2_Ink)
+            Manager.Obj.P2 = (P2_Ink)this;
     }
 
     protected void OnCollisionEnter2D(Collision2D collision)
