@@ -13,4 +13,7 @@ public class Manager
 
     private ResourceManager _resource = new ResourceManager();
     public static ResourceManager Resource { get { return Instance._resource; } }
+
+    private GameManager _game = new GameManager();
+    public static GameManager Game { get { return Instance._game; } }
 }

@@ -17,10 +17,37 @@ public abstract class PlayerController : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
 
         if (this is P1_Paper)
+        {
             Manager.Obj.P1 = (P1_Paper)this;
-
+            Manager.Game.SaveAction += () =>
+            {
+                Manager.Game.p1SavePoint = transform.position;
+            };
+            Manager.Game.DeathAction += () =>
+            {
+                transform.position = Manager.Game.p1SavePoint;
+            };
+        }
         if (this is P2_Ink)
+        {
             Manager.Obj.P2 = (P2_Ink)this;
+            Manager.Game.SaveAction += () =>
+            {
+                Manager.Game.p2SavePoint = transform.position;
+            };
+            Manager.Game.DeathAction += () =>
+            {
+                transform.position = Manager.Game.p2SavePoint;
+            };
+        }
+    }
+
+    protected virtual void Start()
+    {
+        if (this is P1_Paper)
+        {
+            Manager.Game.SaveAction?.Invoke();
+        }
     }
 
     protected void OnCollisionEnter2D(Collision2D collision)
