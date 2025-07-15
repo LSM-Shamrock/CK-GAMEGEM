@@ -3,6 +3,7 @@
 public abstract class PlayerController : MonoBehaviour
 {
     private Rigidbody2D _rb;
+    private SpriteRenderer _sr;
 
     protected abstract float _moveSpeed { get; set; }
 
@@ -15,6 +16,7 @@ public abstract class PlayerController : MonoBehaviour
     protected virtual void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _sr = GetComponent<SpriteRenderer>();
 
         if (this is P1_Paper)
         {
@@ -58,6 +60,9 @@ public abstract class PlayerController : MonoBehaviour
     protected void UpdateMove(int dir)
     {
         _rb.linearVelocityX = dir * _moveSpeed;
+
+        if (dir > 0) _sr.flipX = false;
+        if (dir < 0) _sr.flipX = true;
     }
 
     protected void UpdateJump(bool jump)
