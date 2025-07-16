@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 333152738719402347}
   - component: {fileID: 5068057242251901798}
-  - component: {fileID: 3596071872361795030}
+  - component: {fileID: 7453228949521291778}
   - component: {fileID: 5081862808442272497}
   m_Layer: 0
-  m_Name: DeathObject
+  m_Name: Thorn
   m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f769392d66f914c41b084a69fc211610, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -89,8 +89,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &3596071872361795030
-BoxCollider2D:
+--- !u!60 &7453228949521291778
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -127,14 +127,65 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2.56, y: 2.56}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.07, y: -0.85999995}
+      - {x: -0.089999996, y: -0.81}
+      - {x: -0.12, y: -0.72999996}
+      - {x: -0.13, y: -0.705}
+      - {x: -0.14999999, y: -0.66499996}
+      - {x: -0.155, y: -0.64}
+      - {x: -0.28, y: -0.315}
+      - {x: -0.29999998, y: -0.265}
+      - {x: -0.32999998, y: -0.185}
+      - {x: -0.34, y: -0.16}
+      - {x: -0.35999998, y: -0.12}
+      - {x: -0.36499998, y: -0.095}
+      - {x: -0.39, y: -0.03}
+      - {x: -0.41, y: 0.01}
+      - {x: -0.415, y: 0.035}
+      - {x: -0.44, y: 0.099999994}
+      - {x: -0.45999998, y: 0.14999999}
+      - {x: -0.48999998, y: 0.22999999}
+      - {x: -0.5, y: 0.255}
+      - {x: -0.52, y: 0.275}
+      - {x: -0.545, y: 0.275}
+      - {x: -0.565, y: 0.255}
+      - {x: -0.68, y: -0.205}
+      - {x: -0.695, y: -0.26}
+      - {x: -0.91499996, y: -1.14}
+      - {x: -0.93, y: -1.1949999}
+      - {x: -0.945, y: -1.255}
+      - {x: -0.95, y: -1.28}
+      - {x: 0.085, y: -1.28}
+      - {x: 0.08, y: -1.25}
+      - {x: 0.06, y: -1.2099999}
+      - {x: 0.055, y: -1.185}
+    - - {x: 0.895, y: -1.125}
+      - {x: 0.77, y: -0.835}
+      - {x: 0.71999997, y: -0.71999997}
+      - {x: 0.63, y: -0.51}
+      - {x: 0.61, y: -0.465}
+      - {x: 0.505, y: -0.22}
+      - {x: 0.48, y: -0.17}
+      - {x: 0.465, y: -0.16499999}
+      - {x: 0.45, y: -0.16499999}
+      - {x: 0.42999998, y: -0.175}
+      - {x: 0.42, y: -0.19999999}
+      - {x: 0.41, y: -0.235}
+      - {x: 0.17, y: -1.015}
+      - {x: 0.12, y: -1.17}
+      - {x: 0.095, y: -1.25}
+      - {x: 0.089999996, y: -1.28}
+      - {x: 0.955, y: -1.28}
+      - {x: 0.955, y: -1.265}
+  m_UseDelaunayMesh: 0
 --- !u!114 &5081862808442272497
 MonoBehaviour:
   m_ObjectHideFlags: 0
