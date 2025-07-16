@@ -19,4 +19,9 @@ public class GameScene : BaseScene
 
         return true;
     }
+
+    private void Update()
+    {
+        Manager.Game.Sec += Time.deltaTime;
+    }
 }
