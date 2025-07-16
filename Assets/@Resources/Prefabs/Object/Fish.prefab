@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 7784468151402069901}
   - component: {fileID: 400874876198453842}
   - component: {fileID: 5506182476211992704}
-  - component: {fileID: 5776138950435909466}
   m_Layer: 11
   m_Name: Fish
   m_TagString: Untagged
@@ -171,15 +170,3 @@ MonoBehaviour:
   _isFollowP2: 1
   _followRange: 10
   _moveSpeed: 5
---- !u!114 &5776138950435909466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3350378075036371198}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa38714886357194fb02e53c969bdd93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

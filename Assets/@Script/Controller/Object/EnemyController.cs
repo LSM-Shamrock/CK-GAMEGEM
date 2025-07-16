@@ -40,6 +40,27 @@ public class EnemyController : MonoBehaviour
         UpdateMovestate(Time.deltaTime);
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.TryGetComponent(out PlayerController player))
+        {
+            if (player.OrangeItems.Count > 0)
+            {
+                player.OrangeItems.Dequeue().OnUse();
+                OnDead();
+            }
+            else
+            {
+                Manager.Game.DeathAction?.Invoke();
+            }
+        }
+    }
+
+    public void OnDead()
+    {
+        Destroy(gameObject);
+    }
+
     private bool Move(Vector3 position, float moveAmount)
     {
         if (Vector3.Distance(transform.position, position) <= moveAmount)

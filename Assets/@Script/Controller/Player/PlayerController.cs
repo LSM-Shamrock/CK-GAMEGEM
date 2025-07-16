@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public abstract class PlayerController : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public abstract class PlayerController : MonoBehaviour
     public Vector3 SavePoint { get; set; }
 
     public float PotalCool { get; set; }
+    public Queue<OrangeItem> OrangeItems { get; set; } = new Queue<OrangeItem>();
+
+    public Vector3 LookDirection => _sr.flipX ? Vector3.left : Vector3.right;
 
     protected virtual void Awake()
     {
@@ -54,8 +58,14 @@ public abstract class PlayerController : MonoBehaviour
     {
         _rb.linearVelocityX = dir * MoveSpeed;
 
-        if (dir > 0) _sr.flipX = false;
-        if (dir < 0) _sr.flipX = true;
+        if (dir > 0)
+        {
+            _sr.flipX = false;
+        }
+        if (dir < 0)
+        {
+            _sr.flipX = true;
+        }
     }
 
     protected void UpdateJump(bool jump)

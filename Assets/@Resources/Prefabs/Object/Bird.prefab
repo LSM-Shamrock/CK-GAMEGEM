@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 5208137043212598096}
   - component: {fileID: 45907818198561540}
   - component: {fileID: 4134355855917264756}
-  - component: {fileID: 8583339711023560629}
   m_Layer: 10
   m_Name: Bird
   m_TagString: Untagged
@@ -171,15 +170,3 @@ MonoBehaviour:
   _isFollowP2: 0
   _followRange: 10
   _moveSpeed: 5
---- !u!114 &8583339711023560629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552113589730123794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa38714886357194fb02e53c969bdd93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
