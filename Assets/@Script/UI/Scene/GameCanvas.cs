@@ -7,14 +7,27 @@ public class GameCanvas : UI_Scene
         TimeText,
     }
 
+    public enum Buttons
+    {
+        SettingButton
+    }
+
     public override bool Init()
     {
         if (base.Init() == false)
             return false;
 
         BindTextPro(typeof(TextPros));
+        BindButton(typeof(Buttons));
 
         Manager.Game.Sec = 0f;
+
+
+        GetButton((int)Buttons.SettingButton).onClick.AddListener(() =>
+        {
+            Manager.UI.ShowPopupUI<SettingPop>();
+        });
+
 
         _init = true;
         return true;

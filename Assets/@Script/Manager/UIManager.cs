@@ -68,7 +68,6 @@ public class UIManager
 
 	public void ShowPopupUI<T>(string key = null, Transform parent = null, Action<T> callback = null) where T : UI_Popup
 	{
-		Debug.Log("팝 다침");
 		if (string.IsNullOrEmpty(key))
 			key = typeof(T).Name;
 
@@ -101,7 +100,6 @@ public class UIManager
 
 	public void ClosePopupUI(UI_Popup popup)
 	{
-        Debug.Log("전체 다침");
         if (_popupStack.Count == 0)
 			return;
 
