@@ -25,6 +25,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5158aeae565cdf948919d3114acb80a6
+    m_Address: LevelFragment
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: dc3668bb97d25194a8fcb89b69f916ce
     m_Address: SettingPop
     m_ReadOnly: 0

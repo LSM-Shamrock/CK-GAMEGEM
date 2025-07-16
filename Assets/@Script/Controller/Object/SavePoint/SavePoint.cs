@@ -6,6 +6,8 @@ public class SavePoint : MonoBehaviour
     [SerializeField] private SaveMarker _marker2;
     [SerializeField] private Transform _wall;
 
+    private bool _isOn = false;
+
     private void Awake()
     {
         Manager.Game.DeathAction.Add(this, () =>
@@ -17,11 +19,13 @@ public class SavePoint : MonoBehaviour
 
     private void Update()
     {
-        if (_marker1.IsCheck && _marker2.IsCheck)
+        if (!_isOn && _marker1.IsCheck && _marker2.IsCheck)
         {
             Manager.Game.P1.SavePoint = _marker1.transform.position;
             Manager.Game.P2.SavePoint = _marker2.transform.position;
             _wall.gameObject.SetActive(false);
+            Manager.Game.CurLevel++;
+            _isOn = true;
         }
     }
 }

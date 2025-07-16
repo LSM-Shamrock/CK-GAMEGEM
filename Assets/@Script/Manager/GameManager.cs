@@ -37,4 +37,7 @@ public class GameManager
     public ObjAction DeathAction = new ObjAction();
 
     public float Sec;
+
+    public int LevelCount;
+    public int CurLevel;
 }
