@@ -17,7 +17,7 @@ public class MoverObject : MonoBehaviour
 
     private void Update()
     {
-        Vector3 movePos = Manager.Game.switchChannels[_switchChannel] ? _onPosition : _offPosition;
+        Vector3 movePos = Manager.Game.SwitchChannels[_switchChannel] ? _onPosition : _offPosition;
         transform.position = Vector3.Lerp(transform.position, movePos, _moveSpeed * Time.deltaTime);
 
     }

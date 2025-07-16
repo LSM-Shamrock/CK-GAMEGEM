@@ -8,7 +8,7 @@ public class SwitchObject : MonoBehaviour
     {
         if (collision.transform == Manager.Game.P1.transform || collision.transform == Manager.Game.P2.transform)
         {
-            Manager.Game.switchChannels[_switchChannel] = !Manager.Game.switchChannels[_switchChannel];
+            Manager.Game.SwitchChannels[_switchChannel] = !Manager.Game.SwitchChannels[_switchChannel];
         }
     }
 }

@@ -32,6 +32,11 @@ public abstract class PlayerController : MonoBehaviour
         }
 
         SavePoint = transform.position;
+
+        Manager.Game.DeathAction += () =>
+        {
+            transform.position = SavePoint;
+        };
     }
 
     protected virtual void Update()
@@ -43,11 +48,6 @@ public abstract class PlayerController : MonoBehaviour
     protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
         CurJumpCount = 0;
-    }
-
-    public virtual void Dead()
-    {
-        transform.position = SavePoint;
     }
 
     protected void UpdateMove(int dir)

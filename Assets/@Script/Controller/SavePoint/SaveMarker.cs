@@ -2,11 +2,24 @@
 
 public class SaveMarker : MonoBehaviour
 {
-    public bool IsCheck { get; private set; }
-
-    [SerializeField] private Color changeColor;
+    private Color _checkColor = Color.gray;
+    private Color _nonCheckColor = Color.yellow;
 
     private SpriteRenderer _sr;
+
+    private bool _isCheck;
+    public bool IsCheck 
+    { 
+        get
+        {
+            return _isCheck;
+        } 
+        set
+        {
+            _isCheck = value;
+            _sr.color = _isCheck ? _checkColor : _nonCheckColor;
+        }
+    }
 
     private void Awake()
     {
@@ -18,7 +31,6 @@ public class SaveMarker : MonoBehaviour
         if (collision.transform == Manager.Game.P1.transform || collision.transform == Manager.Game.P2.transform)
         {
             IsCheck = true;
-            _sr.color = changeColor;
         }
     }
 }

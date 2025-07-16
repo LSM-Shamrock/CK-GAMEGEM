@@ -6,6 +6,14 @@ public class SavePoint : MonoBehaviour
     [SerializeField] private SaveMarker _marker2;
     [SerializeField] private Transform _wall;
 
+    private void Awake()
+    {
+        Manager.Game.DeathAction += () =>
+        {
+            _marker1.IsCheck = false;
+            _marker2.IsCheck = false;
+        };
+    }
 
     private void Update()
     {
