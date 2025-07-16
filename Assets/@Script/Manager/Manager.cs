@@ -13,4 +13,7 @@ public class Manager
 
     private GameManager _game = new GameManager();
     public static GameManager Game { get { return Instance._game; } }
+
+    private RankingManager _ranking = new RankingManager();
+    public RankingManager Ranking { get { return Instance._ranking; } }
 }
