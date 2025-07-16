@@ -5,9 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Settings/Scenes/URP2DSceneTemplate.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/@Scenes/StartScene.unity
+    guid: f05fec6b5ab99714ba24d947df21a26d
+  - enabled: 1
+    path: Assets/@Scenes/GameScene.unity
+    guid: 67ba7464fbb51a1468dc3260b4b96e74
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 21c5a898156492c4092edbef52cbc1e2, type: 2}
   m_UseUCBPForAssetBundles: 0
