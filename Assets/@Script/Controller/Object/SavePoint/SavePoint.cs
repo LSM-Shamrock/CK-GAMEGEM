@@ -8,11 +8,11 @@ public class SavePoint : MonoBehaviour
 
     private void Awake()
     {
-        Manager.Game.DeathAction += () =>
+        Manager.Game.DeathAction.Add(this, () =>
         {
             _marker1.IsCheck = false;
             _marker2.IsCheck = false;
-        };
+        });
     }
 
     private void Update()

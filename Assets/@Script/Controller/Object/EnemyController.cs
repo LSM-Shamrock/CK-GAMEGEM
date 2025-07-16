@@ -28,10 +28,10 @@ public class EnemyController : MonoBehaviour
         _pos1 = transform.position;
         _pos2 = transform.position + (Vector3)_moveVector;
 
-        Manager.Game.DeathAction += () =>
+        Manager.Game.DeathAction.Add(this, () =>
         {
             transform.position = _pos1;
-        };
+        });
     }
 
     private void Update()
@@ -51,7 +51,7 @@ public class EnemyController : MonoBehaviour
             }
             else
             {
-                Manager.Game.DeathAction?.Invoke();
+                Manager.Game.DeathAction.Call();
             }
         }
     }

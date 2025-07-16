@@ -37,10 +37,10 @@ public abstract class PlayerController : MonoBehaviour
 
         SavePoint = transform.position;
 
-        Manager.Game.DeathAction += () =>
+        Manager.Game.DeathAction.Add(this, () =>
         {
             transform.position = SavePoint;
-        };
+        });
     }
 
     protected virtual void Update()

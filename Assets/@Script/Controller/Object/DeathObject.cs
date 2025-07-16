@@ -6,7 +6,7 @@ public class DeathObject : MonoBehaviour
     {
         if (collision.transform.TryGetComponent(out PlayerController player))
         {
-            Manager.Game.DeathAction?.Invoke();
+            Manager.Game.DeathAction.Call();
         }
     }
 }
