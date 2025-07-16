@@ -1,46 +1,80 @@
 ﻿using System.Collections;
 using UnityEngine;
+using static UnityEditor.PlayerSettings;
 
 public enum EnemyMoveState
 {
+    None,
+    Random,
     Follow,
-    MovePos1,
-    MovePos2,
 }
 
 public class EnemyController : MonoBehaviour
 {
-    [SerializeField] private Vector2 _moveVector = new Vector2(3f, 0f);
     [SerializeField] private bool _isFollowP1 = true;
     [SerializeField] private bool _isFollowP2 = true;
     [SerializeField] private float _moveSpeed = 5f;
     [SerializeField] private BoxCollider2D _followArea;
+    [SerializeField] private BoxCollider2D _randomMoveArea;
 
-    private Bounds _followAreaBounds;
+    SpriteRenderer _sr;
+
     private Transform _followTarget;
 
-    private Vector3 _pos1;
-    private Vector3 _pos2;
+    private Vector3 _originPos;
+
+    Coroutine _moveRoutine;
 
     private EnemyMoveState _moveState;
+    private EnemyMoveState MoveState
+    {
+        get { return _moveState; } 
+        set
+        {
+            if (_moveState == value)
+                return;
+
+            _moveState = value;
+            if (_moveRoutine != null)
+                StopCoroutine(_moveRoutine);
+
+            if (_moveState == EnemyMoveState.Follow)
+                _moveRoutine = StartCoroutine(FollowRoutine());
+            else 
+                _moveRoutine = StartCoroutine(RandomMoveRoutine());
+        }
+    }
 
     private void Awake()
     {
-        _pos1 = transform.position;
-        _pos2 = transform.position + (Vector3)_moveVector;
+        _sr = GetComponent<SpriteRenderer>();
 
-        _followAreaBounds = _followArea.bounds;
+        _originPos = transform.position;
 
         Manager.Game.DeathAction.Add(this, () =>
         {
-            transform.position = _pos1;
+            transform.position = _originPos;
         });
+
+        MoveState = EnemyMoveState.Random;
     }
 
     private void Update()
     {
-        UpdateFollowTarget();
-        UpdateMovestate(Time.deltaTime);
+        _followTarget = null;
+        if (_isFollowP1 && _followArea.bounds.Contains(Manager.Game.P1.transform.position))
+        {
+            _followTarget = Manager.Game.P1.transform;
+        }
+        if (_isFollowP2 && _followArea.bounds.Contains(Manager.Game.P2.transform.position))
+        {
+            _followTarget = Manager.Game.P2.transform;
+        }
+
+        if (_followTarget != null) 
+            MoveState = EnemyMoveState.Follow;
+        else
+            MoveState = EnemyMoveState.Random;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -50,7 +84,7 @@ public class EnemyController : MonoBehaviour
             if (player.OrangeItems.Count > 0)
             {
                 player.OrangeItems.Dequeue().OnUse();
-                OnDead();
+                Destroy(gameObject);
             }
             else
             {
@@ -59,60 +93,58 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    public void OnDead()
+    private bool Move(Vector3 dest, float moveAmount)
     {
-        Destroy(gameObject);
-    }
+        Vector3 dir = (dest - transform.position).normalized;
 
-    private bool Move(Vector3 position, float moveAmount)
-    {
-        if (Vector3.Distance(transform.position, position) <= moveAmount)
+        if (dir.x > 0f)
+            _sr.flipX = true;
+        if (dir.x < 0f)
+            _sr.flipX = false;
+
+        if (moveAmount >= Vector3.Distance(dest, transform.position))
         {
-            transform.position = position;
+            transform.position = dest;
             return true;
         }
         else
         {
-            transform.position += (position - transform.position).normalized * moveAmount;
+            transform.position += dir * moveAmount;
             return false;
         }
     }
 
-    private void UpdateMovestate(float deltaTime)
+    private IEnumerator FollowRoutine()
     {
-        switch (_moveState)
+        while (true)
         {
-            case EnemyMoveState.Follow:
-                if (_followTarget == null)
-                    _moveState = EnemyMoveState.MovePos1;
-                else
-                    Move(_followTarget.position, deltaTime * _moveSpeed);
-                break;
-            case EnemyMoveState.MovePos1:
-                if (_followTarget != null)
-                    _moveState = EnemyMoveState.Follow;
-                else if (Move(_pos1, deltaTime * _moveSpeed))
-                    _moveState = EnemyMoveState.MovePos2;
-                break;
-            case EnemyMoveState.MovePos2:
-                if (_followTarget != null)
-                    _moveState = EnemyMoveState.Follow;
-                else if (Move(_pos2, deltaTime * _moveSpeed))
-                    _moveState = EnemyMoveState.MovePos1;
-                break;
+            yield return null;
+
+            if (_followTarget == null)
+                continue;
+
+            Move(_followTarget.transform.position, _moveSpeed * Time.deltaTime);
         }
     }
 
-    private void UpdateFollowTarget()
+    private IEnumerator RandomMoveRoutine()
     {
-        _followTarget = null;
-        if (_isFollowP1 && _followAreaBounds.Contains(Manager.Game.P1.transform.position))
+        while (true)
         {
-            _followTarget = Manager.Game.P1.transform;
-        }
-        if (_isFollowP2 && _followAreaBounds.Contains(Manager.Game.P2.transform.position))
-        {
-            _followTarget = Manager.Game.P2.transform;
+            float wait = Random.Range(0f, 0.5f);
+            yield return new WaitForSeconds(wait);
+
+            Vector3 pos = new Vector3();
+            pos.x = Random.Range(_randomMoveArea.bounds.min.x, _randomMoveArea.bounds.max.x);
+            pos.y = Random.Range(_randomMoveArea.bounds.min.y, _randomMoveArea.bounds.max.y);
+            Vector3 dir = (pos - transform.position).normalized;
+            while (true)
+            {
+                yield return null;
+
+                if (Move(pos, _moveSpeed * Time.deltaTime))
+                    break;
+            }
         }
     }
 }
