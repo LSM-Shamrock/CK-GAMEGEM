@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class SwitchObject : MonoBehaviour
+public class Switch : MonoBehaviour
 {
     [SerializeField] private int _switchChannel;
 

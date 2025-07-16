@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class PotalObject : MonoBehaviour
+public class Potal : MonoBehaviour
 {
     [SerializeField]
     Transform _target;
