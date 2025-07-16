@@ -847,7 +847,7 @@ GameObject:
   - component: {fileID: 635581223}
   - component: {fileID: 635581224}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Death
   m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -994,12 +994,12 @@ GameObject:
   - component: {fileID: 712905417}
   - component: {fileID: 712905416}
   m_Layer: 12
-  m_Name: Square (1)
+  m_Name: Switch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &712905414
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1045,7 +1045,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1064,7 +1064,7 @@ Transform:
   m_GameObject: {fileID: 712905413}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.062447, y: -5.2, z: 0}
+  m_LocalPosition: {x: 13.11, y: -4.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1386,11 +1386,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1165075553}
   m_CullTransparentMesh: 1
---- !u!4 &1204636842 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2426822282175494760, guid: d2b3c620bbffeef44b750fbd76bfd25d, type: 3}
-  m_PrefabInstance: {fileID: 2611547955557458140}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1244254893
 GameObject:
   m_ObjectHideFlags: 0
@@ -1404,12 +1399,12 @@ GameObject:
   - component: {fileID: 1244254897}
   - component: {fileID: 1244254894}
   m_Layer: 13
-  m_Name: Square (2)
+  m_Name: Mover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1244254894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1423,7 +1418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _switchChannel: 0
-  _moveVector: {x: 3, y: -10}
+  _moveVector: {x: 1, y: 2}
   _moveSpeed: 2
 --- !u!212 &1244254895
 SpriteRenderer:
@@ -1489,7 +1484,7 @@ Transform:
   m_GameObject: {fileID: 1244254893}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.062447, y: 0.07, z: 0}
+  m_LocalPosition: {x: 21.15, y: -6.77, z: 0}
   m_LocalScale: {x: 1, y: 15, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2287,45 +2282,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 886504182c28ae8468733a039f2da449, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1988225793
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1988225794}
-  m_Layer: 0
-  m_Name: SavePoints
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1988225794
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1988225793}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1204636842}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2611547955557458140
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1988225794}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 309406497479027590, guid: d2b3c620bbffeef44b750fbd76bfd25d, type: 3}
       propertyPath: m_Name
@@ -2562,7 +2525,7 @@ SceneRoots:
   - {fileID: 635581222}
   - {fileID: 712905415}
   - {fileID: 1244254896}
-  - {fileID: 1988225794}
+  - {fileID: 2611547955557458140}
   - {fileID: 4929721022526949573}
   - {fileID: 5997678842214107392}
   - {fileID: 2791641460758877746}
