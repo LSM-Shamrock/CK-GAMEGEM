@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5594236328176996312}
   - component: {fileID: 4178982320426128513}
   - component: {fileID: 2565832878900825420}
+  - component: {fileID: 907425388854524117}
   m_Layer: 10
   m_Name: 1P
   m_TagString: Untagged
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 9be3be85124655643b68b8c4b7eb084d, type: 3}
+  m_Sprite: {fileID: -353153221, guid: e87f8fee57ed02d4c99d0ffa9d0d5741, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -124,8 +125,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.2, y: 0}
-  m_Size: {x: 0.7, y: 2.2}
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1.5, y: 2.2}
   m_Direction: 0
 --- !u!50 &4178982320426128513
 Rigidbody2D:
@@ -166,3 +167,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80bdc7374be984c4f943f23704d333df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &907425388854524117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636513543351512277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9746031661770f4b8134ca7156fedf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sprites:
+  - {fileID: -353153221, guid: e87f8fee57ed02d4c99d0ffa9d0d5741, type: 3}
+  - {fileID: 1976290570, guid: e87f8fee57ed02d4c99d0ffa9d0d5741, type: 3}
+  - {fileID: -117121101, guid: e87f8fee57ed02d4c99d0ffa9d0d5741, type: 3}
+  - {fileID: -1763984182, guid: e87f8fee57ed02d4c99d0ffa9d0d5741, type: 3}
+  - {fileID: 1622894349, guid: e87f8fee57ed02d4c99d0ffa9d0d5741, type: 3}
+  - {fileID: -93264484, guid: e87f8fee57ed02d4c99d0ffa9d0d5741, type: 3}
+  - {fileID: 1001494386, guid: e87f8fee57ed02d4c99d0ffa9d0d5741, type: 3}
+  - {fileID: 620167432, guid: e87f8fee57ed02d4c99d0ffa9d0d5741, type: 3}
+  - {fileID: 1590654228, guid: e87f8fee57ed02d4c99d0ffa9d0d5741, type: 3}
+  _frameSec: 0.08

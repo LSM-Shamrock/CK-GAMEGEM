@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2053686430384088448}
   - component: {fileID: 1018400546711300086}
-  - component: {fileID: 6057615698332598021}
   - component: {fileID: 1324645809895847477}
+  - component: {fileID: 2417244814410512214}
+  - component: {fileID: 4758722721427055831}
   m_Layer: 10
   m_Name: Bird
   m_TagString: Untagged
@@ -89,8 +90,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &6057615698332598021
-PolygonCollider2D:
+--- !u!114 &1324645809895847477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2372187749673016456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d6b37f411adeb34fb206cb7f065f881, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isFollowP1: 1
+  _isFollowP2: 0
+  _moveSpeed: 5
+  _followArea: {fileID: 5357425658892949550}
+  _randomMoveArea: {fileID: 7498510135815330439}
+--- !u!58 &2417244814410512214
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -124,100 +142,8 @@ PolygonCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.56, y: 2.56}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.28, y: -0.765}
-      - {x: 0.39999998, y: -0.73499995}
-      - {x: 0.48499998, y: -0.7}
-      - {x: 0.505, y: -0.69}
-      - {x: 0.60499996, y: -0.69}
-      - {x: 0.75, y: -0.705}
-      - {x: 0.93, y: -0.7}
-      - {x: 0.97999996, y: -0.7}
-      - {x: 1.005, y: -0.675}
-      - {x: 1.015, y: -0.64}
-      - {x: 1.025, y: -0.57}
-      - {x: 1.025, y: -0.555}
-      - {x: 1.0749999, y: -0.48}
-      - {x: 1.095, y: -0.42999998}
-      - {x: 1.095, y: -0.35}
-      - {x: 1.045, y: -0.305}
-      - {x: 1.01, y: -0.285}
-      - {x: 1.035, y: -0.19999999}
-      - {x: 1.03, y: -0.12}
-      - {x: 1, y: -0.089999996}
-      - {x: 0.93, y: -0.08}
-      - {x: 0.865, y: -0.095}
-      - {x: 0.705, y: -0.145}
-      - {x: 0.62, y: -0.175}
-      - {x: 0.445, y: -0.255}
-      - {x: 0.445, y: -0.14}
-      - {x: 0.435, y: -0.114999995}
-      - {x: 0.42499998, y: 0.03}
-      - {x: 0.405, y: 0.125}
-      - {x: 0.375, y: 0.21}
-      - {x: 0.35999998, y: 0.235}
-      - {x: 0.24, y: 0.35999998}
-      - {x: 0.19, y: 0.41}
-      - {x: 0.13499999, y: 0.525}
-      - {x: 0.085, y: 0.655}
-      - {x: 0.044999998, y: 0.73499995}
-      - {x: -0.024999999, y: 0.79999995}
-      - {x: -0.049999997, y: 0.815}
-      - {x: -0.24499999, y: 0.92499995}
-      - {x: -0.35999998, y: 1.035}
-      - {x: -0.39999998, y: 1.055}
-      - {x: -0.42, y: 1.055}
-      - {x: -0.44, y: 1.03}
-      - {x: -0.42999998, y: 0.885}
-      - {x: -0.41, y: 0.745}
-      - {x: -0.39499998, y: 0.645}
-      - {x: -0.38, y: 0.53999996}
-      - {x: -0.37, y: 0.45999998}
-      - {x: -0.355, y: 0.285}
-      - {x: -0.35, y: 0.195}
-      - {x: -0.39999998, y: 0.255}
-      - {x: -0.505, y: 0.35999998}
-      - {x: -0.57, y: 0.405}
-      - {x: -0.61, y: 0.42999998}
-      - {x: -0.69, y: 0.44}
-      - {x: -0.84, y: 0.405}
-      - {x: -0.85999995, y: 0.39499998}
-      - {x: -0.945, y: 0.405}
-      - {x: -1.025, y: 0.44}
-      - {x: -1.0699999, y: 0.44}
-      - {x: -1.105, y: 0.405}
-      - {x: -1.105, y: 0.34}
-      - {x: -1.055, y: 0.255}
-      - {x: -0.97499996, y: 0.155}
-      - {x: -0.895, y: 0.06}
-      - {x: -0.755, y: -0.105}
-      - {x: -0.66999996, y: -0.205}
-      - {x: -0.55, y: -0.32999998}
-      - {x: -0.5, y: -0.38}
-      - {x: -0.575, y: -0.45999998}
-      - {x: -0.655, y: -0.59}
-      - {x: -0.66499996, y: -0.62}
-      - {x: -0.68, y: -0.7}
-      - {x: -0.635, y: -0.74}
-      - {x: -0.475, y: -0.74}
-      - {x: -0.375, y: -0.78999996}
-      - {x: -0.265, y: -0.825}
-      - {x: -0.11, y: -0.825}
-      - {x: -0.06, y: -0.82}
-      - {x: 0.055, y: -0.805}
-      - {x: 0.17, y: -0.78499997}
-  m_UseDelaunayMesh: 0
---- !u!114 &1324645809895847477
+  m_Radius: 1
+--- !u!114 &4758722721427055831
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -226,14 +152,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2372187749673016456}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d6b37f411adeb34fb206cb7f065f881, type: 3}
+  m_Script: {fileID: 11500000, guid: a9746031661770f4b8134ca7156fedf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isFollowP1: 1
-  _isFollowP2: 0
-  _moveSpeed: 5
-  _followArea: {fileID: 5357425658892949550}
-  _randomMoveArea: {fileID: 7498510135815330439}
+  _sprites:
+  - {fileID: 21300000, guid: 479f795fdfd3c9248ac9345877fdeae8, type: 3}
+  - {fileID: 21300000, guid: 116d9d5997f622e4f947decabca56d9f, type: 3}
+  _frameSec: 0.1
 --- !u!1 &5064797357137429398
 GameObject:
   m_ObjectHideFlags: 0
