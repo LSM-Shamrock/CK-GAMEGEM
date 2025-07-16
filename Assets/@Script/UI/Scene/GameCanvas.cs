@@ -10,7 +10,8 @@ public class GameCanvas : UI_Scene
 
     public enum Buttons
     {
-        SettingButton
+        StopButton,
+        SettingButton,
     }
 
     public enum Images
@@ -38,9 +39,20 @@ public class GameCanvas : UI_Scene
         Manager.Game.Sec = 0f;
 
 
+        GetButton((int)Buttons.StopButton).onClick.AddListener(() =>
+        {
+            Manager.UI.ShowPopupUI<StopPop>(callback: (StopPop) =>
+            {
+
+            });
+        });
+
         GetButton((int)Buttons.SettingButton).onClick.AddListener(() =>
         {
-            Manager.UI.ShowPopupUI<SettingPop>();
+            Manager.UI.ShowPopupUI<SettingPop>(callback: (settingPop) =>
+            {
+
+            });
         });
 
         _levelFragments = new LevelFragment[Manager.Game.LevelCount];
@@ -69,6 +81,11 @@ public class GameCanvas : UI_Scene
     {
         RefreshTime();
         RefreshProgress();
+
+        if (Manager.UI.PeekPopupUI<UI_Popup>() == null)
+            Time.timeScale = 1;
+        else 
+            Time.timeScale = 0;
     }
 
     private void RefreshTime()
