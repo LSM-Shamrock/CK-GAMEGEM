@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class MoverObject : MonoBehaviour
+public class SwitchMoverObject : MonoBehaviour
 {
     [SerializeField] private int _switchChannel;
     [SerializeField] private Vector2 _moveVector;
