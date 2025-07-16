@@ -27,6 +27,11 @@ public class EnemyController : MonoBehaviour
     {
         _pos1 = transform.position;
         _pos2 = transform.position + (Vector3)_moveVector;
+
+        Manager.Game.DeathAction += () =>
+        {
+            transform.position = _pos1;
+        };
     }
 
     private void Update()

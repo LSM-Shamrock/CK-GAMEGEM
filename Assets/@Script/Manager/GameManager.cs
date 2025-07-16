@@ -9,4 +9,6 @@ public class GameManager
     public bool[] SwitchChannels = new bool[10];
 
     public Action DeathAction;
+
+    public float Sec;
 }
