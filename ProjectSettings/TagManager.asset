@@ -16,8 +16,8 @@ TagManager:
   - 
   - 
   - 
-  - PaperPlayer
-  - InkPlayer
+  - PaperEntity
+  - InkEntity
   - PaperZone
   - InkZone
   - 
