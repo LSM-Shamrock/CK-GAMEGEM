@@ -13,9 +13,10 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private Vector2 _moveVector = new Vector2(3f, 0f);
     [SerializeField] private bool _isFollowP1 = true;
     [SerializeField] private bool _isFollowP2 = true;
-    [SerializeField] private float _followRange = 10f;
     [SerializeField] private float _moveSpeed = 5f;
+    [SerializeField] private BoxCollider2D _followArea;
 
+    private Bounds _followAreaBounds;
     private Transform _followTarget;
 
     private Vector3 _pos1;
@@ -27,6 +28,8 @@ public class EnemyController : MonoBehaviour
     {
         _pos1 = transform.position;
         _pos2 = transform.position + (Vector3)_moveVector;
+
+        _followAreaBounds = _followArea.bounds;
 
         Manager.Game.DeathAction.Add(this, () =>
         {
@@ -103,28 +106,13 @@ public class EnemyController : MonoBehaviour
     private void UpdateFollowTarget()
     {
         _followTarget = null;
-        if (_isFollowP1 && !_isFollowP2)
+        if (_isFollowP1 && _followAreaBounds.Contains(Manager.Game.P1.transform.position))
         {
-            if (Vector3.Distance(transform.position, Manager.Game.P1.transform.position) <= _followRange)
-            {
-                _followTarget = Manager.Game.P1.transform;
-            }
+            _followTarget = Manager.Game.P1.transform;
         }
-        if (!_isFollowP1 && _isFollowP2)
+        if (_isFollowP2 && _followAreaBounds.Contains(Manager.Game.P2.transform.position))
         {
-            if (Vector3.Distance(transform.position, Manager.Game.P2.transform.position) <= _followRange)
-            {
-                _followTarget = Manager.Game.P2.transform;
-            }
-        }
-        if (_isFollowP1 && _isFollowP2)
-        {
-            float p1Dist = Vector3.Distance(transform.position, Manager.Game.P1.transform.position);
-            float p2Dist = Vector3.Distance(transform.position, Manager.Game.P2.transform.position);
-            if (Mathf.Min(p1Dist, p2Dist) <= _followRange)
-            {
-                _followTarget = p1Dist < p2Dist ? Manager.Game.P1.transform : Manager.Game.P2.transform;
-            }
+            _followTarget = Manager.Game.P2.transform;
         }
     }
 }
