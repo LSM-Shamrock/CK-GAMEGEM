@@ -6,7 +6,7 @@ public class SwitchObject : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.transform == Manager.Obj.P1.transform || collision.transform == Manager.Obj.P2.transform)
+        if (collision.transform == Manager.Game.P1.transform || collision.transform == Manager.Game.P2.transform)
         {
             Manager.Game.switchChannels[_switchChannel] = !Manager.Game.switchChannels[_switchChannel];
         }

@@ -5,13 +5,15 @@ public abstract class PlayerController : MonoBehaviour
     private Rigidbody2D _rb;
     private SpriteRenderer _sr;
 
-    protected abstract float _moveSpeed { get; set; }
+    protected abstract float MoveSpeed { get; set; }
 
-    protected abstract bool _isSwim { get; set; }
-    protected abstract int _maxJumpCount { get; set; }
-    protected abstract int _curJumpCount { get; set; }
-    protected abstract float _jumpPower { get; set; }
-    protected abstract float _fallSpeed { get; set; }
+    protected abstract bool IsSwim { get; set; }
+    protected abstract int MaxJumpCount { get; set; }
+    protected abstract int CurJumpCount { get; set; }
+    protected abstract float JumpPower { get; set; }
+    protected abstract float FallSpeed { get; set; }
+
+    public Vector3 SavePoint { get; set; }
 
     protected virtual void Awake()
     {
@@ -20,46 +22,29 @@ public abstract class PlayerController : MonoBehaviour
 
         if (this is P1_Paper)
         {
-            Manager.Obj.P1 = (P1_Paper)this;
-            Manager.Game.saveAction += () =>
-            {
-                Manager.Game.p1SavePoint = transform.position;
-            };
-            Manager.Game.deathAction += () =>
-            {
-                transform.position = Manager.Game.p1SavePoint;
-            };
+            Manager.Game.P1 = (P1_Paper)this;
         }
         if (this is P2_Ink)
         {
-            Manager.Obj.P2 = (P2_Ink)this;
-            Manager.Game.saveAction += () =>
-            {
-                Manager.Game.p2SavePoint = transform.position;
-            };
-            Manager.Game.deathAction += () =>
-            {
-                transform.position = Manager.Game.p2SavePoint;
-            };
+            Manager.Game.P2 = (P2_Ink)this;
         }
-    }
 
-    protected virtual void Start()
-    {
-        if (this is P1_Paper)
-        {
-            Manager.Game.saveAction?.Invoke();
-        }
+        SavePoint = transform.position;
     }
 
     protected void OnCollisionEnter2D(Collision2D collision)
     {
-        _curJumpCount = 0;
+        CurJumpCount = 0;
+    }
+
+    public virtual void Dead()
+    {
+        transform.position = SavePoint;
     }
 
     protected void UpdateMove(int dir)
     {
-        _rb.linearVelocityX = dir * _moveSpeed;
+        _rb.linearVelocityX = dir * MoveSpeed;
 
         if (dir > 0) _sr.flipX = false;
         if (dir < 0) _sr.flipX = true;
@@ -67,21 +52,21 @@ public abstract class PlayerController : MonoBehaviour
 
     protected void UpdateJump(bool jump)
     {
-        if (jump && _curJumpCount < _maxJumpCount && _rb.linearVelocityY <= _jumpPower / 2f)
+        if (jump && CurJumpCount < MaxJumpCount && _rb.linearVelocityY <= JumpPower / 2f)
         {
-            _rb.linearVelocityY = _jumpPower;
-            _curJumpCount++;
+            _rb.linearVelocityY = JumpPower;
+            CurJumpCount++;
         }
     }
 
     protected void UpdateFall(float deltaTime)
     {
-        _rb.linearVelocityY -= deltaTime * _fallSpeed;
+        _rb.linearVelocityY -= deltaTime * FallSpeed;
     }
 
     protected void UpdateSwim()
     {
-        if (_isSwim)
-            _curJumpCount = 0;
+        if (IsSwim)
+            CurJumpCount = 0;
     }
 }

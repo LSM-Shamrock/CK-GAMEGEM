@@ -18,8 +18,8 @@ public class CameraController : MonoBehaviour
 
     private void LateUpdate()
     {
-        Vector3 p1Pos = Manager.Obj.P1.transform.position;
-        Vector3 p2Pos = Manager.Obj.P2.transform.position;
+        Vector3 p1Pos = Manager.Game.P1.transform.position;
+        Vector3 p2Pos = Manager.Game.P2.transform.position;
 
         Vector3 targetPos = Vector3.Lerp(p1Pos, p2Pos, 0.5f);
         targetPos.y = 0f;

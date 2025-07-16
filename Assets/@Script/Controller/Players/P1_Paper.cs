@@ -2,13 +2,13 @@
 
 public class P1_Paper : PlayerController
 {
-    protected override float _moveSpeed { get; set; } = 8f;
+    protected override float MoveSpeed { get; set; } = 8f;
 
-    protected override bool _isSwim { get; set; } = false;
-    protected override int _maxJumpCount { get; set; } = 2;
-    protected override int _curJumpCount { get; set; } = 0;
-    protected override float _jumpPower { get; set; } = 20f;
-    protected override float _fallSpeed { get; set; } = 60f;
+    protected override bool IsSwim { get; set; } = false;
+    protected override int MaxJumpCount { get; set; } = 2;
+    protected override int CurJumpCount { get; set; } = 0;
+    protected override float JumpPower { get; set; } = 20f;
+    protected override float FallSpeed { get; set; } = 60f;
 
 
     private void Update()
