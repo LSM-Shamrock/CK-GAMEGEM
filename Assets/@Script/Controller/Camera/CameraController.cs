@@ -6,10 +6,39 @@ public class CameraController : MonoBehaviour
 
     private float _moveSpeed = 5f;
 
-    [SerializeField] private float dist1 = 20f;
-    [SerializeField] private float dist2 = 40f;
-    [SerializeField] private float size1 = 10f;
-    [SerializeField] private float size2 = 20f;
+    [SerializeField] private CompositeCollider2D _cameraArea;
+
+    private float HalfWidth
+    {
+        get { return _camera.aspect * _camera.orthographicSize; }
+        set { _camera.orthographicSize = value / _camera.aspect; }
+    }
+    private float HalfHeight
+    {
+        get { return _camera.orthographicSize; }
+        set { _camera.orthographicSize = value; }
+    }
+
+    private float Left
+    {
+        get { return transform.position.x - HalfWidth; }
+        set
+        {
+            Vector3 p = transform.position;
+            p.x = value + HalfWidth;
+            transform.position = p;
+        }
+    }
+    private float Right
+    {
+        get { return transform.position.x + HalfWidth; }
+        set
+        {
+            Vector3 p = transform.position;
+            p.x = value - HalfWidth;
+            transform.position = p;
+        }
+    }
 
     private void Awake()
     {
@@ -25,9 +54,14 @@ public class CameraController : MonoBehaviour
         targetPos.y = 0f;
         transform.position = Vector3.Lerp(transform.position, targetPos, _moveSpeed * Time.deltaTime);
 
-        float dist = Mathf.Abs(p1Pos.x - p2Pos.x);
+        if (Left < _cameraArea.bounds.min.x && Right <= _cameraArea.bounds.max.x)
+        {
+            Left = _cameraArea.bounds.min.x;
+        }
+        if (Right > _cameraArea.bounds.max.x && Left >= _cameraArea.bounds.min.x)
+        {
+            Right = _cameraArea.bounds.max.x;
+        }
 
-        float size = Mathf.Lerp(size1, size2, Mathf.Clamp01((dist - dist1) / (dist2 - dist1)));
-        _camera.orthographicSize = size;
     }
 }
