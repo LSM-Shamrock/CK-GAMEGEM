@@ -10,7 +10,6 @@ public class GameCanvas : UI_Scene
 
     public enum Buttons
     {
-        StopButton,
         SettingButton,
     }
 
@@ -37,15 +36,6 @@ public class GameCanvas : UI_Scene
         BindObject(typeof(Objects));
 
         Manager.Game.Sec = 0f;
-
-
-        GetButton((int)Buttons.StopButton).onClick.AddListener(() =>
-        {
-            Manager.UI.ShowPopupUI<StopPop>(callback: (StopPop) =>
-            {
-
-            });
-        });
 
         GetButton((int)Buttons.SettingButton).onClick.AddListener(() =>
         {
