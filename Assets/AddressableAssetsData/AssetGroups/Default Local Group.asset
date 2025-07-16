@@ -15,6 +15,11 @@ MonoBehaviour:
   m_GroupName: Default Local Group
   m_GUID: c14255240525ad948ad77254ab29b3c1
   m_SerializeEntries:
+  - m_GUID: 3bde696fc6e7c904f8f9d2c53aad5e68
+    m_Address: GameCanvas
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 50bab762217f6ac498e57c106460b75c
     m_Address: EventSystem
     m_ReadOnly: 0
