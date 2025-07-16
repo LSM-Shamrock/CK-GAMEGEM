@@ -11,8 +11,10 @@ public class P1_Paper : PlayerController
     protected override float FallSpeed { get; set; } = 60f;
 
 
-    private void Update()
+    protected override void Update()
     {
+        base.Update();
+
         int dir = 0;
         if (Input.GetKey(KeyCode.A)) dir--;
         if (Input.GetKey(KeyCode.D)) dir++;

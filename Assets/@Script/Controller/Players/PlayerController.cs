@@ -15,6 +15,8 @@ public abstract class PlayerController : MonoBehaviour
 
     public Vector3 SavePoint { get; set; }
 
+    public float PotalCool { get; set; }
+
     protected virtual void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -32,7 +34,13 @@ public abstract class PlayerController : MonoBehaviour
         SavePoint = transform.position;
     }
 
-    protected void OnCollisionEnter2D(Collision2D collision)
+    protected virtual void Update()
+    {
+        if (PotalCool > 0) 
+            PotalCool -= Time.deltaTime;
+    }
+
+    protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
         CurJumpCount = 0;
     }

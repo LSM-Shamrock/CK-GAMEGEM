@@ -11,8 +11,10 @@ public class P2_Ink : PlayerController
     protected override float FallSpeed { get; set; } = 5f;
 
 
-    private void Update()
+    protected override void Update()
     {
+        base.Update();
+
         int dir = 0;
         if (Input.GetKey(KeyCode.LeftArrow)) dir--;
         if (Input.GetKey(KeyCode.RightArrow)) dir++;
