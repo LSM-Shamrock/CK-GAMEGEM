@@ -30,6 +30,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6cd8f088166ed244f9680ed9b236b063
+    m_Address: RankingPop
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: dc3668bb97d25194a8fcb89b69f916ce
     m_Address: SettingPop
     m_ReadOnly: 0

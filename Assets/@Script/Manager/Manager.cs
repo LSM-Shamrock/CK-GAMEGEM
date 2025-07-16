@@ -15,5 +15,5 @@ public class Manager
     public static GameManager Game { get { return Instance._game; } }
 
     private RankingManager _ranking = new RankingManager();
-    public RankingManager Ranking { get { return Instance._ranking; } }
+    public static RankingManager Ranking { get { return Instance._ranking; } }
 }

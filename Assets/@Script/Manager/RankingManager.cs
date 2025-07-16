@@ -28,6 +28,8 @@ public class RankingManager
             return new RankingData();
 
         string json = File.ReadAllText(FilePath);
+
+        Debug.Log(json);
         return JsonUtility.FromJson<RankingData>(json);
     }
 
@@ -42,9 +44,13 @@ public class RankingManager
         });
 
         data.rankings.Sort((a, b) => a.totalSeconds.CompareTo(b.totalSeconds));
+        if (data.rankings.Count > 5)
+            data.rankings.RemoveRange(5, data.rankings.Count - 5);
 
         string json = JsonUtility.ToJson(data, true);
         File.WriteAllText(FilePath, json);
+
+        Debug.Log(FilePath);
     }
 
     public void ClearRanking()

@@ -35,8 +35,6 @@ public class GameCanvas : UI_Scene
         BindImage(typeof(Images));
         BindObject(typeof(Objects));
 
-        Manager.Game.Sec = 0f;
-
         GetButton((int)Buttons.SettingButton).onClick.AddListener(() =>
         {
             Manager.UI.ShowPopupUI<SettingPop>(callback: (settingPop) =>
@@ -80,9 +78,9 @@ public class GameCanvas : UI_Scene
 
     private void RefreshTime()
     {
-        int h = (int)Manager.Game.Sec / 60 / 60;
-        int m = (int)Manager.Game.Sec / 60 % 60;
-        int s = (int)Manager.Game.Sec % 60;
+        int h = Manager.Game.playTime.Hours;
+        int m = Manager.Game.playTime.Minutes;
+        int s = Manager.Game.playTime.Seconds;
         GetTextPro((int)TextPros.TimeText).text = $"{h} : {m:D2} : {s:D2}";
     }
 
