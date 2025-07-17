@@ -17,7 +17,7 @@ public class TitleCanvas : UI_Scene
     {
         if (Input.GetMouseButtonDown(0))
         {
-            SceneManager.LoadScene("GameScene");
+            SceneManager.LoadScene("StageTest");
         }
 
         if (Input.GetKeyDown(KeyCode.R) && Manager.UI.PeekPopupUI<UI_Popup>() == null)
