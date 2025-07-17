@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "CK-GAMEGEM.sln"
+    "dotnet.defaultSolution": "MonochromeAdventure.sln"
 }

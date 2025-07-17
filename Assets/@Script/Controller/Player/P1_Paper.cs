@@ -7,7 +7,7 @@ public class P1_Paper : PlayerController
     protected override bool IsSwim { get; set; } = false;
     protected override int MaxJumpCount { get; set; } = 2;
     protected override int CurJumpCount { get; set; } = 0;
-    protected override float JumpPower { get; set; } = 30f;
+    protected override float JumpPower { get; set; } = 20f;
     protected override float FallSpeed { get; set; } = 60f;
 
 
