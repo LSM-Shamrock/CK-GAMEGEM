@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5152524732512033783}
   - component: {fileID: 4628955778695115732}
   - component: {fileID: 3089407905296296528}
+  - component: {fileID: 5931514671465867621}
   m_Layer: 11
   m_Name: 2P
   m_TagString: Untagged
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 3bed5068f0b7c554ca3a57fe69bd0487, type: 3}
+  m_Sprite: {fileID: -1643810444, guid: 4c6fddb1db1a3e6419a7cd83b89dbc66, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -125,8 +126,8 @@ CapsuleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.7, y: 2.2}
-  m_Direction: 0
+  m_Size: {x: 2.2, y: 1.2}
+  m_Direction: 1
 --- !u!50 &4628955778695115732
 Rigidbody2D:
   serializedVersion: 5
@@ -166,3 +167,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b19ffc9878c172e4ca16acac127cad86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5931514671465867621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7123649558652216381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9746031661770f4b8134ca7156fedf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sprites:
+  - {fileID: -1643810444, guid: 4c6fddb1db1a3e6419a7cd83b89dbc66, type: 3}
+  - {fileID: 262961347, guid: 4c6fddb1db1a3e6419a7cd83b89dbc66, type: 3}
+  - {fileID: 1121986783, guid: 4c6fddb1db1a3e6419a7cd83b89dbc66, type: 3}
+  - {fileID: 106184947, guid: 4c6fddb1db1a3e6419a7cd83b89dbc66, type: 3}
+  - {fileID: -1960998635, guid: 4c6fddb1db1a3e6419a7cd83b89dbc66, type: 3}
+  - {fileID: -998036823, guid: 4c6fddb1db1a3e6419a7cd83b89dbc66, type: 3}
+  - {fileID: -1363488885, guid: 4c6fddb1db1a3e6419a7cd83b89dbc66, type: 3}
+  - {fileID: -1599882897, guid: 4c6fddb1db1a3e6419a7cd83b89dbc66, type: 3}
+  - {fileID: 589250466, guid: 4c6fddb1db1a3e6419a7cd83b89dbc66, type: 3}
+  - {fileID: -1857802934, guid: 4c6fddb1db1a3e6419a7cd83b89dbc66, type: 3}
+  _frameSec: 0.08
