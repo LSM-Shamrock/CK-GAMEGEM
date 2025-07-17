@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 
-public class StartScene : BaseScene
+public class TitleScene : BaseScene
 {
     protected override bool Init()
     {
         if (base.Init() == false)
             return false;
 
-        Manager.UI.ShowSceneUI<StartCanvas>();
+        Manager.UI.ShowSceneUI<TitleCanvas>();
 
         return true;
     }

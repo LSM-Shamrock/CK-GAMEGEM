@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class StartCanvas : UI_Scene
+public class TitleCanvas : UI_Scene
 {
     public override bool Init()
     {
