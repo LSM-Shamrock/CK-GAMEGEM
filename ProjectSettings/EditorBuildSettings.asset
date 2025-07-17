@@ -5,18 +5,18 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: Assets/Settings/Scenes/URP2DSceneTemplate.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/@Scenes/TitleScene.unity
     guid: f05fec6b5ab99714ba24d947df21a26d
   - enabled: 1
-    path: Assets/@Scenes/FrologScene.unity
-    guid: 6a3eba846705a664e91c158525196f83
-  - enabled: 1
     path: Assets/@Scenes/GameScene.unity
     guid: 67ba7464fbb51a1468dc3260b4b96e74
   - enabled: 1
-    path: Assets/@Scenes/EndingScene.unity
-    guid: 548cdf59c9ee68e44a4d6453fae163c3
+    path: Assets/@Scenes/StageTest.unity
+    guid: 0386c5f6cd9e350479f487ac36a8c74e
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 21c5a898156492c4092edbef52cbc1e2, type: 2}
   m_UseUCBPForAssetBundles: 0

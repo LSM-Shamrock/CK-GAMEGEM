@@ -1,22 +1,16 @@
 fileFormatVersion: 2
-guid: f8bf15b93da112a488a56ee9b09f5d2b
+guid: b21e49f08522bbe4a8db3815b704ed6c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1951067367167216954
-    second: "\u110B\u1175\u11BC\u110F\u1173 \u1111\u1169\u11A8\u1111\u1169_0"
+      213: -5283173811791748705
+    second: tutoIMG2_0
   - first:
-      213: 7902299676122184057
-    second: "\u110B\u1175\u11BC\u110F\u1173 \u1111\u1169\u11A8\u1111\u1169_1"
+      213: -826574499480191027
+    second: tutoIMG2_1
   - first:
-      213: 6015754143118652589
-    second: "\u110B\u1175\u11BC\u110F\u1173 \u1111\u1169\u11A8\u1111\u1169_2"
-  - first:
-      213: -1500609573361578294
-    second: "\u110B\u1175\u11BC\u110F\u1173 \u1111\u1169\u11A8\u1111\u1169_3"
-  - first:
-      213: -2866968016624222950
-    second: "\u110B\u1175\u11BC\u110F\u1173 \u1111\u1169\u11A8\u1111\u1169_4"
+      213: -8644090917729976567
+    second: tutoIMG2_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -58,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -112,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u110B\u1175\u11BC\u110F\u1173 \u1111\u1169\u11A8\u1111\u1169_0"
+      name: tutoIMG2_0
       rect:
         serializedVersion: 2
-        x: 397
-        y: 803
-        width: 1311
-        height: 442
+        x: 174
+        y: 294
+        width: 137
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,20 +121,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6c23427119a6ce4e0800000000000000
-      internalID: -1951067367167216954
+      spriteID: f91a18dd8656ea6b0800000000000000
+      internalID: -5283173811791748705
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u110B\u1175\u11BC\u110F\u1173 \u1111\u1169\u11A8\u1111\u1169_1"
+      name: tutoIMG2_1
       rect:
         serializedVersion: 2
-        x: 1721
-        y: 1099
-        width: 136
-        height: 115
+        x: 307
+        y: 151
+        width: 159
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 97972ffefab9aad60800000000000000
-      internalID: 7902299676122184057
+      spriteID: dcf36124fda6784f0800000000000000
+      internalID: -826574499480191027
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u110B\u1175\u11BC\u110F\u1173 \u1111\u1169\u11A8\u1111\u1169_2"
+      name: tutoIMG2_2
       rect:
         serializedVersion: 2
-        x: 191
-        y: 821
-        width: 165
-        height: 214
+        x: 36
+        y: 151
+        width: 126
+        height: 136
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,52 +165,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: da4fba435804c7350800000000000000
-      internalID: 6015754143118652589
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\u110B\u1175\u11BC\u110F\u1173 \u1111\u1169\u11A8\u1111\u1169_3"
-      rect:
-        serializedVersion: 2
-        x: 1717
-        y: 967
-        width: 104
-        height: 125
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ace8b392b83cc2be0800000000000000
-      internalID: -1500609573361578294
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\u110B\u1175\u11BC\u110F\u1173 \u1111\u1169\u11A8\u1111\u1169_4"
-      rect:
-        serializedVersion: 2
-        x: 328
-        y: 803
-        width: 90
-        height: 162
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a1df4ba57cb7638d0800000000000000
-      internalID: -2866968016624222950
+      spriteID: 90f3682db150a0880800000000000000
+      internalID: -8644090917729976567
       vertices: []
       indices: 
       edges: []
@@ -225,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -235,16 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "\uC81C\uBAA9 \uC5C6\uC74C-11_0": -6920804639726007807
-      "\uC81C\uBAA9 \uC5C6\uC74C-11_1": 1731014004056521562
-      "\uC81C\uBAA9 \uC5C6\uC74C-11_2": -6157262285910443321
-      "\uC81C\uBAA9 \uC5C6\uC74C-11_3": 7377643565907453488
-      "\uC81C\uBAA9 \uC5C6\uC74C-11_4": -1721569749618833411
-      "\uC81C\uBAA9 \uC5C6\uC74C-11_5": 7809984486700206233
-      "\uC81C\uBAA9 \uC5C6\uC74C-11_6": -5902123770534636682
-      "\uC81C\uBAA9 \uC5C6\uC74C-11_7": -9111322140027309564
-      "\uC81C\uBAA9 \uC5C6\uC74C-11_8": -2770494415171704127
-      "\uC81C\uBAA9 \uC5C6\uC74C-11_9": -1278567051293703373
+      tutoIMG2_0: -5283173811791748705
+      tutoIMG2_1: -826574499480191027
+      tutoIMG2_2: -8644090917729976567
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
