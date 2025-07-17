@@ -2,6 +2,7 @@
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [InitializeOnLoad]
 public static class AutoSceneSwitcher
@@ -13,7 +14,7 @@ public static class AutoSceneSwitcher
 
     static void OnPlayModeChanged(PlayModeStateChange state)
     {
-        string StartScenePath = "Assets/@Scenes/StartScene.unity";
+        string StartScenePath = SceneUtility.GetScenePathByBuildIndex(0);
         string PrefsKey = "Exited_Scene_Path";
 
         if (state == PlayModeStateChange.ExitingEditMode)
