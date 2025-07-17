@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d6f69995113254a44b12b7dd4cee6912
+guid: 2da91b23122a4594a8da43ab894af47d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8613188704228992658
-    second: "\uC9C0\uB8B0_0"
+      213: -3975624549204834352
+    second: lever_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\uC9C0\uB8B0_0"
+      name: lever_0
       rect:
         serializedVersion: 2
-        x: 13
-        y: 16
-        width: 486
-        height: 485
+        x: 28
+        y: 38
+        width: 462
+        height: 628
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 296e9faed71388770800000000000000
-      internalID: 8613188704228992658
+      spriteID: 0d7c258498eb3d8c0800000000000000
+      internalID: -3975624549204834352
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      "\uC9C0\uB8B0_0": 8613188704228992658
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
