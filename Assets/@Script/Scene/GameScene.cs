@@ -27,12 +27,5 @@ public class GameScene : BaseScene
     private void Update()
     {
         Manager.Game.playTime += TimeSpan.FromSeconds(Time.deltaTime);
-
-        float max = 5;
-        if (Manager.Game.P1.transform.position.x >= max && Manager.Game.P2.transform.position.x >= max)
-        {
-            Manager.Ranking.SaveRanking("", Manager.Game.playTime);
-            SceneManager.LoadScene("StartScene");
-        }
     }
 }
