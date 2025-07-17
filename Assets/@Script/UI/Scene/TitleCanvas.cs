@@ -6,7 +6,7 @@ public class TitleCanvas : UI_Scene
     public enum Buttons
     {
         PlayButton,
-        RankingBUtton,
+        RankingButton,
     }
 
     public override bool Init()
@@ -21,7 +21,7 @@ public class TitleCanvas : UI_Scene
             SceneManager.LoadScene("GameScene");
         });
 
-        GetButton((int)Buttons.RankingBUtton).onClick.AddListener(() =>
+        GetButton((int)Buttons.RankingButton).onClick.AddListener(() =>
         {
             Manager.UI.ShowPopupUI<RankingPop>(callback: (rankingPop) =>
             {
