@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: fd8bddd95ab88fb45bffb8d11c7a415d
+guid: 97f1fee2db04eef44b58c07a8cc078ff
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1208040086343421634
-    second: image_0
+      213: 7457263247478552816
+    second: tutoIMG1_0
+  - first:
+      213: -1535843150973817838
+    second: tutoIMG1_1
+  - first:
+      213: -6790487990265758784
+    second: tutoIMG1_2
+  - first:
+      213: -1750600803260581217
+    second: tutoIMG1_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +55,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -100,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: image_0
+      name: tutoIMG1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 323
-        height: 221
+        x: 181
+        y: 329
+        width: 127
+        height: 111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +124,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2ce8eecde02d3c010800000000000000
-      internalID: 1208040086343421634
+      spriteID: 0f8f88ec9658d7760800000000000000
+      internalID: 7457263247478552816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutoIMG1_1
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 199
+        width: 127
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21c2d7b9ac69faae0800000000000000
+      internalID: -1535843150973817838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutoIMG1_2
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 178
+        width: 120
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cb37a0862753c1a0800000000000000
+      internalID: -6790487990265758784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutoIMG1_3
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 195
+        width: 131
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9ab32238dd94b7e0800000000000000
+      internalID: -1750600803260581217
       vertices: []
       indices: 
       edges: []
@@ -125,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      image_0: 1208040086343421634
+      tutoIMG1_0: 7457263247478552816
+      tutoIMG1_1: -1535843150973817838
+      tutoIMG1_2: -6790487990265758784
+      tutoIMG1_3: -1750600803260581217
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

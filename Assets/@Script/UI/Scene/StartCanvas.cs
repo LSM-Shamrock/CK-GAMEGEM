@@ -7,7 +7,7 @@ public class StartCanvas : UI_Scene
     {
         if (Input.GetMouseButtonDown(0))
         {
-            SceneManager.LoadScene("GameScene");
+            SceneManager.LoadScene("StageTest");//임시수정
         }
     }
 }
