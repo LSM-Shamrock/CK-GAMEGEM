@@ -1,13 +1,22 @@
 fileFormatVersion: 2
-guid: 3bed5068f0b7c554ca3a57fe69bd0487
+guid: f8bf15b93da112a488a56ee9b09f5d2b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8521722717578867773
-    second: IMSI_mono_0
+      213: -1951067367167216954
+    second: "\u110B\u1175\u11BC\u110F\u1173 \u1111\u1169\u11A8\u1111\u1169_0"
   - first:
-      213: 7894768893288992619
-    second: IMSI_mono_1
+      213: 7902299676122184057
+    second: "\u110B\u1175\u11BC\u110F\u1173 \u1111\u1169\u11A8\u1111\u1169_1"
+  - first:
+      213: 6015754143118652589
+    second: "\u110B\u1175\u11BC\u110F\u1173 \u1111\u1169\u11A8\u1111\u1169_2"
+  - first:
+      213: -1500609573361578294
+    second: "\u110B\u1175\u11BC\u110F\u1173 \u1111\u1169\u11A8\u1111\u1169_3"
+  - first:
+      213: -2866968016624222950
+    second: "\u110B\u1175\u11BC\u110F\u1173 \u1111\u1169\u11A8\u1111\u1169_4"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -54,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 512
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IMSI_mono_0
+      name: "\u110B\u1175\u11BC\u110F\u1173 \u1111\u1169\u11A8\u1111\u1169_0"
       rect:
         serializedVersion: 2
-        x: 52
-        y: 223
-        width: 11
-        height: 12
+        x: 397
+        y: 803
+        width: 1311
+        height: 442
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +127,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d343aaf59ad334670800000000000000
-      internalID: 8521722717578867773
+      spriteID: 6c23427119a6ce4e0800000000000000
+      internalID: -1951067367167216954
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMSI_mono_1
+      name: "\u110B\u1175\u11BC\u110F\u1173 \u1111\u1169\u11A8\u1111\u1169_1"
       rect:
         serializedVersion: 2
-        x: 60
-        y: 35
-        width: 87
-        height: 229
+        x: 1721
+        y: 1099
+        width: 136
+        height: 115
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +149,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b6f4b4cea7adf8d60800000000000000
-      internalID: 7894768893288992619
+      spriteID: 97972ffefab9aad60800000000000000
+      internalID: 7902299676122184057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u110B\u1175\u11BC\u110F\u1173 \u1111\u1169\u11A8\u1111\u1169_2"
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 821
+        width: 165
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da4fba435804c7350800000000000000
+      internalID: 6015754143118652589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u110B\u1175\u11BC\u110F\u1173 \u1111\u1169\u11A8\u1111\u1169_3"
+      rect:
+        serializedVersion: 2
+        x: 1717
+        y: 967
+        width: 104
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ace8b392b83cc2be0800000000000000
+      internalID: -1500609573361578294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u110B\u1175\u11BC\u110F\u1173 \u1111\u1169\u11A8\u1111\u1169_4"
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 803
+        width: 90
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1df4ba57cb7638d0800000000000000
+      internalID: -2866968016624222950
       vertices: []
       indices: 
       edges: []
@@ -160,8 +235,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      IMSI_mono_0: 8521722717578867773
-      IMSI_mono_1: 7894768893288992619
+      "\u110B\u1175\u11BC\u110F\u1173 \u1111\u1169\u11A8\u1111\u1169_0": -1951067367167216954
+      "\u110B\u1175\u11BC\u110F\u1173 \u1111\u1169\u11A8\u1111\u1169_1": 7902299676122184057
+      "\u110B\u1175\u11BC\u110F\u1173 \u1111\u1169\u11A8\u1111\u1169_2": 6015754143118652589
+      "\u110B\u1175\u11BC\u110F\u1173 \u1111\u1169\u11A8\u1111\u1169_3": -1500609573361578294
+      "\u110B\u1175\u11BC\u110F\u1173 \u1111\u1169\u11A8\u1111\u1169_4": -2866968016624222950
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
