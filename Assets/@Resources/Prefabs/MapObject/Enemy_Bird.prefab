@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2053686430384088448}
   - component: {fileID: 1018400546711300086}
-  - component: {fileID: 1324645809895847477}
   - component: {fileID: 2417244814410512214}
+  - component: {fileID: 1324645809895847477}
   - component: {fileID: 4758722721427055831}
   m_Layer: 10
   m_Name: Bird
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 479f795fdfd3c9248ac9345877fdeae8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 91a6424d570db7d4382a9b015891f153, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -90,23 +90,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1324645809895847477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2372187749673016456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d6b37f411adeb34fb206cb7f065f881, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _isFollowP1: 1
-  _isFollowP2: 0
-  _moveSpeed: 5
-  _followArea: {fileID: 5357425658892949550}
-  _randomMoveArea: {fileID: 7498510135815330439}
 --- !u!58 &2417244814410512214
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -142,7 +125,24 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 1
+  m_Radius: 0.4
+--- !u!114 &1324645809895847477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2372187749673016456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d6b37f411adeb34fb206cb7f065f881, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isFollowP1: 1
+  _isFollowP2: 0
+  _moveSpeed: 5
+  _followArea: {fileID: 5357425658892949550}
+  _randomMoveArea: {fileID: 7498510135815330439}
 --- !u!114 &4758722721427055831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,8 +156,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sprites:
-  - {fileID: 21300000, guid: 479f795fdfd3c9248ac9345877fdeae8, type: 3}
-  - {fileID: 21300000, guid: 116d9d5997f622e4f947decabca56d9f, type: 3}
+  - {fileID: 21300000, guid: 91a6424d570db7d4382a9b015891f153, type: 3}
+  - {fileID: 21300000, guid: 72700e247e794824a9db13939c54f07e, type: 3}
   _frameSec: 0.1
 --- !u!1 &5064797357137429398
 GameObject:
@@ -185,7 +185,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.4, y: 1.4, z: 1.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2053686430384088448}

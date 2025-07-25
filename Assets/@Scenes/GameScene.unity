@@ -646,7 +646,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   padding: 5
   minSize: 15
-  maxSize: 50
+  maxSize: 30
   targets:
   - {fileID: 1634172276}
   - {fileID: 178892402}
@@ -1181,7 +1181,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8266426998730626116, guid: 576dedf1a788e3346afdc9a11b501fc6, type: 3}
       propertyPath: _moveVector.y
-      value: 20
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8266426998730626116, guid: 576dedf1a788e3346afdc9a11b501fc6, type: 3}
       propertyPath: _switchChannel
@@ -2131,19 +2131,19 @@ CompositeCollider2D:
   - m_Collider: {fileID: 474678906}
     m_ColliderPaths:
     - - X: 5000000000
-        Y: 250000000
+        Y: 150000000
       - X: -5000000000
-        Y: 250000000
+        Y: 150000000
       - X: -5000000000
-        Y: -250000000
+        Y: -150000000
       - X: 5000000000
-        Y: -250000000
+        Y: -150000000
   m_CompositePaths:
     m_Paths:
-    - - {x: 500, y: 25}
-      - {x: -500, y: 25}
-      - {x: -500, y: -25}
-      - {x: 500, y: -25}
+    - - {x: 500, y: 15}
+      - {x: -500, y: 15}
+      - {x: -500, y: -15}
+      - {x: 500, y: -15}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0
   m_UseDelaunayMesh: 0
@@ -6825,19 +6825,19 @@ CompositeCollider2D:
   - m_Collider: {fileID: 1658303336}
     m_ColliderPaths:
     - - X: 5000000000
-        Y: 250000000
+        Y: 150000000
       - X: -5000000000
-        Y: 250000000
+        Y: 150000000
       - X: -5000000000
-        Y: -250000000
+        Y: -150000000
       - X: 5000000000
-        Y: -250000000
+        Y: -150000000
   m_CompositePaths:
     m_Paths:
-    - - {x: 500, y: 25}
-      - {x: -500, y: 25}
-      - {x: -500, y: -25}
-      - {x: 500, y: -25}
+    - - {x: 500, y: 15}
+      - {x: -500, y: 15}
+      - {x: -500, y: -15}
+      - {x: 500, y: -15}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0
   m_UseDelaunayMesh: 0
@@ -7244,7 +7244,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 450, y: 0, z: 0}
-  m_LocalScale: {x: 1000, y: 100, z: 1}
+  m_LocalScale: {x: 1000, y: 60, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1851331239}
@@ -7457,19 +7457,19 @@ CompositeCollider2D:
   - m_Collider: {fileID: 1851331238}
     m_ColliderPaths:
     - - X: 5000000000
-        Y: 500000000
+        Y: 300000000
       - X: -5000000000
-        Y: 500000000
+        Y: 300000000
       - X: -5000000000
-        Y: -500000000
+        Y: -300000000
       - X: 5000000000
-        Y: -500000000
+        Y: -300000000
   m_CompositePaths:
     m_Paths:
-    - - {x: 500, y: 50}
-      - {x: -500, y: 50}
-      - {x: -500, y: -50}
-      - {x: 500, y: -50}
+    - - {x: 500, y: 30}
+      - {x: -500, y: 30}
+      - {x: -500, y: -30}
+      - {x: 500, y: -30}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0
   m_UseDelaunayMesh: 0
@@ -7862,7 +7862,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8266426998730626116, guid: 576dedf1a788e3346afdc9a11b501fc6, type: 3}
       propertyPath: _moveVector.y
-      value: 20
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8266426998730626116, guid: 576dedf1a788e3346afdc9a11b501fc6, type: 3}
       propertyPath: _switchChannel
@@ -8810,7 +8810,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5359685302870065321, guid: 74b08f12ffd140742a4647a01948eeee, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5359685302870065321, guid: 74b08f12ffd140742a4647a01948eeee, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8925,7 +8925,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3112142303403267744, guid: 83e992a2b2808f645a63a58b341ac369, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3112142303403267744, guid: 83e992a2b2808f645a63a58b341ac369, type: 3}
       propertyPath: m_LocalPosition.z

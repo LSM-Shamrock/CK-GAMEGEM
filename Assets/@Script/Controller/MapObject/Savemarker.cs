@@ -2,10 +2,11 @@
 
 public class Savemarker : MonoBehaviour
 {
-    private Color _checkColor = Color.gray;
-    private Color _nonCheckColor = Color.yellow;
+    private Color _checkColor = new Color(0.5f, 0.5f, 0.5f, 0.5f);
+    private Color _nonCheckColor = new Color(1.0f, 1.0f, 0.0f, 0.5f);
 
-    private SpriteRenderer _sr;
+    [SerializeField]
+    SpriteRenderer _circle;
 
     private bool _isCheck;
     public bool IsCheck 
@@ -17,20 +18,7 @@ public class Savemarker : MonoBehaviour
         set
         {
             _isCheck = value;
-            _sr.color = _isCheck ? _checkColor : _nonCheckColor;
-        }
-    }
-
-    private void Awake()
-    {
-        _sr = GetComponent<SpriteRenderer>();
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.transform == Manager.Game.P1.transform || collision.transform == Manager.Game.P2.transform)
-        {
-            IsCheck = true;
+            _circle.color = _isCheck ? _checkColor : _nonCheckColor;
         }
     }
 }
