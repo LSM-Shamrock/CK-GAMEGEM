@@ -11,7 +11,7 @@ public class GameScene : BaseScene
 
         Manager.Game.playTime = TimeSpan.Zero;
 
-        Manager.Game.LevelCount = FindObjectsByType<SavePoint>(FindObjectsSortMode.None).Length;
+        Manager.Game.LevelCount = FindObjectsByType<Savepoint>(FindObjectsSortMode.None).Length;
         Manager.Game.CurLevel = 0;
 
         Manager.UI.ShowSceneUI<GameCanvas>();

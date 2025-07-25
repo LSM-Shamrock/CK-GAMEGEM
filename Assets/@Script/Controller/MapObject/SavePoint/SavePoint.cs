@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 
-public class SavePoint : MonoBehaviour
+public class Savepoint : MonoBehaviour
 {
-    [SerializeField] private SaveMarker _marker1;
-    [SerializeField] private SaveMarker _marker2;
+    [SerializeField] private Savemarker _marker1;
+    [SerializeField] private Savemarker _marker2;
     [SerializeField] private Transform _wall;
 
     private bool _isOn = false;

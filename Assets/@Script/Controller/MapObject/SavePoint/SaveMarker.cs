@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class SaveMarker : MonoBehaviour
+public class Savemarker : MonoBehaviour
 {
     private Color _checkColor = Color.gray;
     private Color _nonCheckColor = Color.yellow;
