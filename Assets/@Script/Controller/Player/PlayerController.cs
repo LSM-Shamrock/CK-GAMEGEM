@@ -6,13 +6,23 @@ public abstract class PlayerController : MonoBehaviour
     private Rigidbody2D _rb;
     private SpriteRenderer _sr;
 
-    protected abstract float MoveSpeed { get; set; }
+    [SerializeField] 
+    protected float _moveSpeed = 14f;
 
-    protected abstract bool IsSwim { get; set; }
-    protected abstract int MaxJumpCount { get; set; }
-    protected abstract int CurJumpCount { get; set; }
-    protected abstract float JumpPower { get; set; }
-    protected abstract float FallSpeed { get; set; }
+    [SerializeField] 
+    protected int _maxJumpCount = 2;
+
+    protected int _curJumpCount = 0;
+
+    [SerializeField] 
+    protected float _jumpPower = 26;
+
+    [SerializeField] 
+    protected float _fallSpeed = 60;
+
+    [SerializeField] 
+    protected bool _isSwim = false;
+
 
     public Vector3 SavePoint { get; set; }
 
@@ -51,12 +61,12 @@ public abstract class PlayerController : MonoBehaviour
 
     protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
-        CurJumpCount = 0;
+        _curJumpCount = 0;
     }
 
     protected void UpdateMove(int dir)
     {
-        _rb.linearVelocityX = dir * MoveSpeed;
+        _rb.linearVelocityX = dir * _moveSpeed;
 
         if (dir > 0)
         {
@@ -70,21 +80,21 @@ public abstract class PlayerController : MonoBehaviour
 
     protected void UpdateJump(bool jump)
     {
-        if (jump && CurJumpCount < MaxJumpCount && _rb.linearVelocityY <= JumpPower / 2f)
+        if (jump && _curJumpCount < _maxJumpCount && _rb.linearVelocityY <= _jumpPower / 2f)
         {
-            _rb.linearVelocityY = JumpPower;
-            CurJumpCount++;
+            _rb.linearVelocityY = _jumpPower;
+            _curJumpCount++;
         }
     }
 
     protected void UpdateFall(float deltaTime)
     {
-        _rb.linearVelocityY -= deltaTime * FallSpeed;
+        _rb.linearVelocityY -= deltaTime * _fallSpeed;
     }
 
     protected void UpdateSwim()
     {
-        if (IsSwim)
-            CurJumpCount = 0;
+        if (_isSwim)
+            _curJumpCount = 0;
     }
 }

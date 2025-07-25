@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ClearTrigger : MonoBehaviour
+public class Goal : MonoBehaviour
 {
     private bool _isOnP1;
     private bool _isOnP2;
@@ -20,9 +20,9 @@ public class ClearTrigger : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.transform == Manager.Game.P1.transform)
-            _isOnP1 = false;
-        if (collision.transform == Manager.Game.P2.transform)
-            _isOnP2 = false;
+        //if (collision.transform == Manager.Game.P1.transform)
+        //    _isOnP1 = false;
+        //if (collision.transform == Manager.Game.P2.transform)
+        //    _isOnP2 = false;
     }
 }

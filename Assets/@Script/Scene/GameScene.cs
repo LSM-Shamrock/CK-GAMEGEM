@@ -4,8 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class GameScene : BaseScene
 {
-    [SerializeField] CompositeCollider2D _progressArea;
-
     protected override bool Init()
     {
         if (base.Init() == false)
@@ -16,10 +14,7 @@ public class GameScene : BaseScene
         Manager.Game.LevelCount = FindObjectsByType<SavePoint>(FindObjectsSortMode.None).Length;
         Manager.Game.CurLevel = 0;
 
-        Manager.UI.ShowSceneUI<GameCanvas>(callback: (gameCanvas) =>
-        {
-
-        });
+        Manager.UI.ShowSceneUI<GameCanvas>();
 
         return true;
     }
@@ -27,5 +22,8 @@ public class GameScene : BaseScene
     private void Update()
     {
         Manager.Game.playTime += TimeSpan.FromSeconds(Time.deltaTime);
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+            Manager.UI.ClosePopupUI();
     }
 }
